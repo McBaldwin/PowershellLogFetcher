@@ -5,6 +5,8 @@ Todos:
 	-need to test a way to convert security group guids to display names
 	-implement error checking
 	-comment code... #boring
+	-add ssh to pull logs for linux hosts
+	-break out windows/linux pulls to functions
 
 Completed tasks:
 	-pull logs from remote computer
