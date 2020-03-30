@@ -8,7 +8,8 @@ $date = Get-Date -Format dd-MMM-yy
 #checks if variable has a value
 if ($computers){
 foreach ($comp in $computers){
-    Get-EventLog -computename $comp -LogName Security | where-object {$events -contains $_.EventID } | select-object EventID,MachineName,index,EntryType,Message,Source,TimeGenerated | Export-csv -Path "$psscriptroot\$date.csv" -Append
+    write-host "Pulling logs from $comp" -foregroundcolor green
+    Get-EventLog -computername $comp -LogName Security | where-object {$events -contains $_.EventID } | select-object EventID,MachineName,index,EntryType,Message,Source,TimeGenerated | Export-csv -Path "$psscriptroot\$date.csv" -Append
 
 }
 } else {
