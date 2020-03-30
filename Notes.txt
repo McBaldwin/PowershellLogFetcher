@@ -1,14 +1,15 @@
 Currently tested and verified with pulling the hosts from a file
 
 Todos: 
-	-test and ensure pulling from OU works, know that I will need to bracket and add .name to the get-adcomputer command
 	-need to test a way to convert security group guids to display names
 	-implement error checking
 	-comment code... #boring
 	-add ssh to pull logs for linux hosts
-	-break out windows/linux pulls to functions
 
 Completed tasks:
+	-break out windows/linux pulls to functions
+	-pulling from OU now tested and operational
+	-Added write-host to show what computer script is currently pulling from
 	-pull logs from remote computer
 	-filter logs by a event ID
 	-filter logs from an array from a file
