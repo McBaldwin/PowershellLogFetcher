@@ -25,7 +25,7 @@ foreach ($comp in $computers){
 function LinuxLogFetch{
 
     if ($Lcomputers){
-        write-host "would now pull logs from linux"
+        write-host "would now pull logs from linux computers"
     }
     
 }
