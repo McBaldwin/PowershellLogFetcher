@@ -2,6 +2,7 @@
 $computers = get-content $psscriptroot\Dep_files\computers.txt
 #uncomment the below line to import a computer list from an OU, note that you will need rsat installed for this to work
 #$computers = (get-adcomputer -filter * -searchbase "OU=Computers,DC=Mcbaldwin,DC=net").DNSHostName
+#Uncomment the below line to import linux hosts to the file
 #$Lcomputers = get-content $psscriptroot\Dep_files\LinuxComputers.txt
 $events = Get-Content $PSScriptRoot\Dep_files\eventids.txt
 $date = Get-Date -Format dd-MMM-yy
@@ -23,7 +24,7 @@ foreach ($comp in $computers){
 
 
 function LinuxLogFetch{
-
+    #linux log pull coming soon
     if ($Lcomputers){
         write-host "would now pull logs from linux computers"
     }
