@@ -32,4 +32,10 @@ function LinuxLogFetch{
 }
 
 WindowsLogFetch
-#LinuxLogFetch
+
+if ($host.Version.Major -like 7){
+LinuxLogFetch
+} else {
+    Write-Host "Linux log pulls requires Powershell v7, skipping linux logs" -ForegroundColor Yellow
+
+}
